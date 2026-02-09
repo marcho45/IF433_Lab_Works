@@ -1,4 +1,4 @@
-package ` oop_00000126931_Paulus Marchionni Sadipun`.week01
+package oop_00000126931_PaulusMarchionniSadipun.week01
 
 
 fun main() {
