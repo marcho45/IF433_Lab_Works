@@ -2,14 +2,17 @@ package oop_00000126931_paulus_marchionni_sadipun.week01
 
 fun main(args: Array<String>) {
     // Variable definition
-    var radius: Double = 7.0
-    var pi: Double = 3.14
+    // REFACTOR: Ubah var jadi val, hapus :Double (Type Inference)
+    val radius = 7.0
+    val pi = 3.14
 
     // Calculation
-    var area: Double = pi * radius * radius
+    // REFACTOR: Ubah var jadi val, hapus :Double
+    val area = pi * radius * radius
 
     // Output Concatenation
-    println("Radius: " + radius + ", Area: " + area)
+    // REFACTOR: Ubah jadi String Template ($radius, $area)
+    println("Radius: $radius, Area: $area")
 
     // Logic check
     checkSize(area)
