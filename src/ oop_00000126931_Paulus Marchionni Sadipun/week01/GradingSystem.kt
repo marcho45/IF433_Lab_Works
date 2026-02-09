@@ -19,6 +19,11 @@ fun main() {
     // Function call
     println("Status: ${calculateStatus(score)}")
 
+    // Null Safety
+    val studentId: String? = null
+    val idLength = studentId?.length ?: 0 // Elvis Operator
+    println("Panjang ID: $idLength")
+
 }
 
 fun calculateStatus(score: Int) = if (score > 75) "Lulus" else "Tidak Lulus"
