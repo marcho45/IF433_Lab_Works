@@ -1,13 +1,27 @@
 package oop_00000126931_PaulusMarchionniSadipun.week03
 
-fun main(){
-    val e = Employee("Marho");
-    e.salary = -1000
-    e.salary = 5000000
-    println("Gaji: ${e.salary}")
+fun main() {
+    println("--- TOKO SENJATA (WEAPON TEST) ---")
 
-    e.increasePerformance()
+    val sword = Weapon("Excalibur")
 
-    println("Pajak keren git yang harus dibayar: ${e.tax}");
+    println("Senjata: ${sword.name}")
 
+
+    println("\n[Test 1] Set damage ke -50")
+    sword.damage = -50
+    println("Damage saat ini: ${sword.damage}")
+    println("Tier: ${sword.tier}")
+
+
+    println("\n[Test 2] Set damage ke 9999")
+    sword.damage = 9999
+    println("Damage saat ini: ${sword.damage}")
+    println("Tier: ${sword.tier}")
+
+
+    println("\n[Test 3] Set damage ke 600")
+    sword.damage = 600
+    println("Damage saat ini: ${sword.damage}")
+    println("Tier: ${sword.tier}")
 }
