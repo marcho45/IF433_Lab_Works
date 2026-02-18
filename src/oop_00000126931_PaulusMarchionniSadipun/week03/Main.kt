@@ -8,6 +8,6 @@ fun main(){
 
     e.increasePerformance()
 
-    println("Pajak yang harus dibayar: ${e.tax}");
+    println("Pajak keren git yang harus dibayar: ${e.tax}");
 
 }
