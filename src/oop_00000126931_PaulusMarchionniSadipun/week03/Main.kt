@@ -1,27 +1,20 @@
 package oop_00000126931_PaulusMarchionniSadipun.week03
 
 fun main() {
-    println("--- TOKO SENJATA (WEAPON TEST) ---")
+    println("--- GAME LEVELING SYSTEM ---")
 
-    val sword = Weapon("Excalibur")
-
-    println("Senjata: ${sword.name}")
-
-
-    println("\n[Test 1] Set damage ke -50")
-    sword.damage = -50
-    println("Damage saat ini: ${sword.damage}")
-    println("Tier: ${sword.tier}")
+    val p1 = Player("Marko")
+    println("Player: ${p1.username}")
+    println("Level Awal: ${p1.level}")
 
 
-    println("\n[Test 2] Set damage ke 9999")
-    sword.damage = 9999
-    println("Damage saat ini: ${sword.damage}")
-    println("Tier: ${sword.tier}")
+
+    println("\n[Aksi 1] Mengalahkan Slime...")
+    p1.addXp(50)
+    println("Status: Level ${p1.level}")
 
 
-    println("\n[Test 3] Set damage ke 600")
-    sword.damage = 600
-    println("Damage saat ini: ${sword.damage}")
-    println("Tier: ${sword.tier}")
+    println("\n[Aksi 2] Mengalahkan Naga...")
+    p1.addXp(60)
+    println("Status Akhir: Level ${p1.level}")
 }
