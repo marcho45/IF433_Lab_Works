@@ -19,4 +19,14 @@ fun main () {
     electricCar.accelerate()
     electricCar.honk()
     electricCar.openTrunk()
+
+    println("\n--- Manager ---")
+    val manager = Manager (name = "Marcho", baseSalary = 1_000_000)
+    manager.work()
+    println("Bonus Manager: Rp ${manager.calculateBonus()}")
+
+    println("\n--- Developer ---")
+    val developer = Developer (programmingLanguage = "TypeScript", name = "Antony", baseSalary = 500_000)
+    developer.work()
+    println("Bonus Developer: Rp ${developer.calculateBonus()}")
 }

@@ -1,5 +1,7 @@
 package week4
 
+
+
 open class Employee(val name: String, val baseSalary: Int) {
 
     open fun work(){
