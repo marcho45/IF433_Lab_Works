@@ -1,8 +1,6 @@
-package week4
+package oop_00000126931_PaulusMarchionniSadipun.week4
 
-import oop_00000126931_PaulusMarchionniSadipun.week04.Vehicle
-
- class  ElectricCar (brand: String,  numberOfDoors: Int, val batteryCapacity:
+class  ElectricCar (brand: String,  numberOfDoors: Int, val batteryCapacity:
 Int) : Car(brand, numberOfDoors) {
 
      final override fun accelerate() {
