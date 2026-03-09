@@ -1,9 +1,7 @@
 package oop_00000126931_PaulusMarchionniSadipun.week5
 
 fun main() {
-    // ==========================================
-    // GUIDED LAB: PEGAWAI & SMART CASTING
-    // ==========================================
+
     val dosen1 = Dosen(nama = "Pak Jono", nidn = "0122334")
     val admin1 = Admin(nama = "Bu Siti")
 
@@ -28,9 +26,7 @@ fun main() {
         println("-----------------------------------------------------------")
     }
 
-    // ==========================================
-    // TUGAS MANDIRI 1: MATH HELPER (OVERLOADING)
-    // ==========================================
+
     println("\n=== TUGAS MANDIRI 1: MATH HELPER ===")
 
     val kalkulator = MathHelper()
@@ -43,4 +39,21 @@ fun main() {
 
     val luasLingkaran = kalkulator.hitungLuas(7.0)
     println("Luas Lingkaran (jari-jari 7.0): $luasLingkaran")
+
+
+    println("\n=== TUGAS MANDIRI 2: SISTEM PEMBAYARAN ===")
+
+    // 1. Buat objek EWallet (balance 50.000) dan CreditCard (limit 100.000)
+    val dompetMarko = EWallet(accountName = "MarkoPay", balance = 50000.0)
+    val kartuMarko = CreditCard(accountName = "MarkoCard", limit = 100000.0)
+
+    // 2. Masukkan keduanya ke dalam list bertipe PaymentMethod
+    val daftarPembayaran: List<PaymentMethod> = listOf(dompetMarko, kartuMarko)
+
+    // 3. Lakukan perulangan (for) dan panggil processPayment(75000.0)
+    for (metode in daftarPembayaran) {
+        println("-> Mencoba membayar Rp75000 dengan akun: ${metode.accountName}")
+        metode.processPayment(75000.0)
+        println("-".repeat(30))
+    }
 }
