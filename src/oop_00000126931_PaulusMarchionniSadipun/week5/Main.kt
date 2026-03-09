@@ -9,10 +9,8 @@ fun main() {
 
     println("=== AKTIVITAS PEGAWAI ===")
     for (pegawai in daftarPegawai) {
-        // Memanggil fungsi dari class induk (Runtime Polymorphism)
         pegawai.berkerja()
 
-        // Smart Casting
         when (pegawai){
             is Dosen -> {
                 println("=> Terdeteksi sebagai Dosen (NIDN: ${pegawai.nidn})")
@@ -25,7 +23,6 @@ fun main() {
         }
         println("-----------------------------------------------------------")
     }
-
 
     println("\n=== TUGAS MANDIRI 1: MATH HELPER ===")
 
@@ -40,20 +37,26 @@ fun main() {
     val luasLingkaran = kalkulator.hitungLuas(7.0)
     println("Luas Lingkaran (jari-jari 7.0): $luasLingkaran")
 
-
     println("\n=== TUGAS MANDIRI 2: SISTEM PEMBAYARAN ===")
 
-    // 1. Buat objek EWallet (balance 50.000) dan CreditCard (limit 100.000)
     val dompetMarko = EWallet(accountName = "MarkoPay", balance = 50000.0)
     val kartuMarko = CreditCard(accountName = "MarkoCard", limit = 100000.0)
 
-    // 2. Masukkan keduanya ke dalam list bertipe PaymentMethod
     val daftarPembayaran: List<PaymentMethod> = listOf(dompetMarko, kartuMarko)
 
-    // 3. Lakukan perulangan (for) dan panggil processPayment(75000.0)
     for (metode in daftarPembayaran) {
         println("-> Mencoba membayar Rp75000 dengan akun: ${metode.accountName}")
+
         metode.processPayment(75000.0)
+
+        if (metode is EWallet) {
+            println("=> Wah, saldo kurang! Sistem otomatis melakukan Top Up...")
+            metode.topUp(50000.0)
+
+            println("=> Mencoba membayar ulang...")
+            metode.processPayment(75000.0)
+        }
+
         println("-".repeat(30))
     }
 }
