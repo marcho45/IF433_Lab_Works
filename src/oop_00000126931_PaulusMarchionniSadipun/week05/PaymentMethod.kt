@@ -1,4 +1,4 @@
-package oop_00000126931_PaulusMarchionniSadipun.week5
+package oop_00000126931_PaulusMarchionniSadipun.week05
 
 abstract class PaymentMethod (val accountName: String) {
     abstract fun processPayment(amount: Double)

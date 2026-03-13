@@ -1,4 +1,4 @@
-package oop_00000126931_PaulusMarchionniSadipun.week4
+package oop_00000126931_PaulusMarchionniSadipun.week04
 
 class  ElectricCar (brand: String,  numberOfDoors: Int, val batteryCapacity:
 Int) : Car(brand, numberOfDoors) {

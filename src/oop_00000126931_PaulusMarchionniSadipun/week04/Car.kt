@@ -1,6 +1,4 @@
-package oop_00000126931_PaulusMarchionniSadipun.week4
-
-import oop_00000126931_PaulusMarchionniSadipun.week04.Vehicle
+package oop_00000126931_PaulusMarchionniSadipun.week04
 
 open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
 
