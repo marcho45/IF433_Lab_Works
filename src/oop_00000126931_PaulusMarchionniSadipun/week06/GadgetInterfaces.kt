@@ -4,10 +4,10 @@ interface Camera {
     fun turnOn() {
         println("Lensa camera terbuka dan sensor aktif!!")
     }
+}
 
-    interface Phone {
-        fun turnOn() {
-            println("sinyal seluler mencari jaringan")
-        }
+interface Phone {
+    fun turnOn() {
+        println("sinyal seluler mencari jaringan")
     }
 }
