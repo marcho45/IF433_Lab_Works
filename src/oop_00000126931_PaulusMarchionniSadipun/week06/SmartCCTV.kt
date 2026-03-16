@@ -5,18 +5,18 @@ class SmartCCTV(override val id: String, override val name: String) : SmartDevic
 
 
     override fun turnOn() {
-        println("CCTV '\$name' menyala dan mulai memantau area.")
+        println("CCTV '$name' menyala dan mulai memantau area.")
         startRecord()
     }
 
 
     override fun turnOff() {
-        println("CCTV '\$name' dimatikan.")
+        println("CCTV '$name' dimatikan.")
         stopRecord()
     }
 
     override fun startRecord() {
-        println("CCTV '\$name' sedang merekam video...")
+        println("CCTV '$name' sedang merekam video...")
     }
 
 

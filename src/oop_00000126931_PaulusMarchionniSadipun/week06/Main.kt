@@ -24,4 +24,16 @@ fun main() {
     println("\n === TESTING CHECKOUT ===")
     ProcessCheckout( method = pay1, amount = 500.0)
     ProcessCheckout(method = pay2, amount = 500.0)
+
+
+    val hub = SmartHomeHub()
+
+    hub.addDevice(lampu)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
+
+
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
 }
+
