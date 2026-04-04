@@ -42,6 +42,16 @@ fun main () {
     println("Detail Senjata: ${pedangPemain.item}")
     println("Durability: ${pedangPemain.durability} / 50")
 
+    println("\n=== SIMULASI IMMUTABILITY & EVENT ===")
+    val pedangUpgrade = pedangPemain.item.copy(damage = 25)
 
+    println("Senjata berhasil di-upgrade di Blacksmith!")
+    println("Detail baru: $pedangUpgrade")
+    println("-".repeat(50))
+
+    processEvent(SafeZone)
+    processEvent(MonsterEncounter("Goblin Nakal"))
+    processEvent(LootDropped(pedangUpgrade))
+    processEvent(GameOver("Terkena jebakan racun"))
 
 }
