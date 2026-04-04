@@ -1,6 +1,5 @@
 package oop_00000126931_PaulusMarchionniSadipun.week07
 
-import java.awt.event.ItemEvent
 
 enum class ItemRarity (val dropChance: Int) {
 
