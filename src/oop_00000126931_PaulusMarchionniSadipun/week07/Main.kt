@@ -30,4 +30,18 @@ fun main () {
         is ApiResponse.Loading -> "Tampilkan Spinner"
     }
 
+    GameManager.startGame()
+    GameManager.startGame()
+
+    println("\n=== Simulasi Factory & Enum ===")
+
+    println("Peluang mendapatkan item LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
+    val pedangPemain = Weapon.forgeStarterSword()
+
+    println("\nSenjata awal berhasil ditempa!")
+    println("Detail Senjata: ${pedangPemain.item}")
+    println("Durability: ${pedangPemain.durability} / 50")
+
+
+
 }
