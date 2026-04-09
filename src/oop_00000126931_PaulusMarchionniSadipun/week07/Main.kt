@@ -27,7 +27,7 @@ fun main () {
     val uiMessage = when(response) {
         is ApiResponse.Success -> "Tampilkan: ${response.data}"
         is ApiResponse.Error -> "Mulcul Alert: ${response.massage}"
-        is ApiResponse.Loading -> "Tampilkan Spinner"
+        is ApiResponse.Loading -> "Tampilkan Spinner benny"
     }
 
     GameManager.startGame()
