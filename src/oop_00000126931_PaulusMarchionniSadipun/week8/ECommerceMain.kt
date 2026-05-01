@@ -24,6 +24,6 @@ fun main() {
 
             println("Peringatan Data Korup: ${e.message}")
         }
-        println("-------------------------")
+        println("--------------------------")
     }
 }
