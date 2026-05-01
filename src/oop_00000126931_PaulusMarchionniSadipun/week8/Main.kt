@@ -22,4 +22,13 @@ fun main() {
 
     println(receipt)
 
+    println("\n=== TEST SAFE CASTING ===")
+    val mixedData: List<Any> = listOf(
+        "Smartphone",
+        150000,
+        UserProfile("Andi", null),
+        "Laptop",
+        4500000.0x
+    )
+
 }
