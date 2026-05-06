@@ -6,6 +6,15 @@ fun main() {
     println("=== TEST APPLY ===")
     val user = User().apply {
         name = "Alex"
-        age = 25 // Typo modul $age=25$ diperbaiki
+        age = 25
     }
     println(user)
+
+
+    println("\n=== TEST ALSO ===")
+    val numbers = mutableListOf(1, 2, 3)
+    numbers.also {
+        println("Log Sebelum ditambah: $it")
+        it.add(4) // Typo modul '3.add(4)' diperbaiki menjadi 'it.add(4)'
+        println("Setelah ditambah: $numbers")
+    }
