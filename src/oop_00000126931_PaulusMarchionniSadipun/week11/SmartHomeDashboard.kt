@@ -30,5 +30,9 @@ fun main() {
         println(it.diagnose())
     }
 
+    println("\n=== SUMMARY ===")
+    with(homeDevices) {
+        println("Total Perangkat: ${this.size}")
+    }
 
 }
