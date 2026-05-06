@@ -35,4 +35,7 @@ fun main() {
         println("Total Perangkat: ${this.size}")
     }
 
+    val totalPower = homeDevices.run { sumOf { it.powerLoad } }
+    println("Total Daya Keseluruhan: $totalPower Watt")
+
 }
