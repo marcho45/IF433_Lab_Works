@@ -18,3 +18,8 @@ fun main() {
         it.add(4) // Typo modul '3.add(4)' diperbaiki menjadi 'it.add(4)'
         println("Setelah ditambah: $numbers")
     }
+
+    println("\n=== TEST WITH ===")
+    with(user) {
+        println("User Detail -> Nama: $name, Umur: $age")
+    }
