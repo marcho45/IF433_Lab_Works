@@ -16,3 +16,17 @@ fun fromCsvTrade(line: String): TradeRecord? {
         null
     }
 }
+
+fun saveTrades(trades: List<TradeRecord>, path: String) {
+    File(path).printWriter().use { out ->
+        trades.forEach { out.println(it.toCsv()) }
+    }
+}
+
+fun loadTrades(path: String): List<TradeRecord> {
+    return try {
+        File(path).readLines().mapNotNull { fromCsvTrade(it) }
+    } catch (e: FileNotFoundException) {
+        emptyList()
+    }
+}
